@@ -7,9 +7,21 @@ window.addEventListener("load", () => {
 window.addEventListener("load", () => {
   document.querySelector(".containerHome").classList.add("show");
 });
-
+    
 // animasi scroll to load
+const home = document.querySelector(".containerHome");
 const about = document.querySelector(".containerAbout");
+const contact = document.querySelector(".containerContact");
+
+const animHome = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
 
 const animAbout = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -21,7 +33,19 @@ const animAbout = new IntersectionObserver((entries) => {
   });
 });
 
+const animContact = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
+
+animHome.observe(home);
 animAbout.observe(about);
+animContact.observe(contact);
 
 // klik to link
 const items = document.querySelectorAll(".boxSosmed");
