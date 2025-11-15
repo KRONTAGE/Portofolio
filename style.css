@@ -5,6 +5,11 @@
 
 body {
   background-color: #000;
+  transition: all 0.4s ease-out;
+}
+
+body.switch {
+  background-color: white;
 }
 
 .header {
@@ -21,6 +26,10 @@ body {
   opacity: 0;
   transform: translateY(-20px);
   transition: all 1s ease;
+}
+
+.header.switch {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .header.show {
@@ -56,26 +65,61 @@ nav ul li a {
   color: white;
   font-family: Arial;
   text-decoration: none;
-  transition: .4s ease;
+  transition: 0.4s ease;
 }
 
 nav ul li a:hover {
   color: red;
 }
 
+/* toogle */
+#toogle {
+  background: rgb(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border: solid white;
+  border-radius: 30px;
+  display: flex;
+  height: 30px;
+  width: 60px;
+  right: 0;
+  top: 64px;
+  position: fixed;
+  margin-right: 10px;
+  z-index: 1000;
+}
+
+#toogle.switch {
+  background: rgba(255, 255, 255, 0.8);
+  border: solid #000;
+}
+
+#circle {
+  background: white;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  transition: all 1s ease;
+}
+
+#circle.switch {
+  background: #000;
+  right: 0;
+}
+
 /* Home */
 .home {
   align-items: center;
-  background: #000;
   display: flex;
   justify-content: center;
   height: 100vh;
   width: 100%;
 }
 
-.home h1 {
+#welcomeText {
   color: red;
   font-family: "BBH Sans Hegarty";
+  font-size: 2.3em;
 }
 
 .containerHome {
@@ -94,11 +138,7 @@ nav ul li a:hover {
   transform: translateY(0);
 }
 
-.containerHome h1 {
-  font-size: 2.3em;
-}
-
-.containerHome a {
+#btn {
   background: white;
   color: #000;
   border-radius: 8px;
@@ -109,14 +149,18 @@ nav ul li a:hover {
   width: 30%;
 }
 
-.containerHome a:hover {
+#btn.switch {
+  background: #000;
+  color: white;
+}
+
+#btn:hover {
   color: red;
 }
 
 /* About */
 .about {
   align-content: center;
-  background: #000;
   height: 80vh;
   justify-items: center;
 }
@@ -169,6 +213,11 @@ nav ul li a:hover {
   text-decoration: none;
   text-align: center;
   width: 18%;
+}
+
+.btn.switch {
+  background: #000;
+  color: white;
 }
 
 .btn:hover {
@@ -225,7 +274,7 @@ nav ul li a:hover {
   .about {
     height: 80vh;
   }
-  
+
   .pic {
     width: 45vw;
   }
@@ -241,18 +290,23 @@ nav ul li a:hover {
 
 @media screen and (max-width: 440px) {
   .pic {
-    width: 50vw
+    width: 50vw;
   }
 }
 
 /* Contact */
-.containerContact {
+.contact {
   align-items: center;
-  background: #000;
   display: flex;
   flex-direction: column;
   height: 60vh;
   justify-content: center;
+}
+
+.containerContact {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   /* animasi */
   opacity: 0;
   transform: translateY(-20px);
@@ -282,6 +336,13 @@ nav ul li a:hover {
   padding: 6px;
 }
 
+.boxSosmed.switch {
+  background-color: white;
+  box-shadow: -1px 0px 17px 2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 0px 17px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 0px 17px 2px rgba(0, 0, 0, 0.75);
+}
+
 .boxSosmed img {
   width: 5vw;
 }
@@ -300,7 +361,7 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
-h4 {
+.containerContact h4 {
   color: white;
   font-size: 1.5em;
   font-family: "Franklin Gothic Medium";
@@ -308,7 +369,6 @@ h4 {
 
 /* Footer */
 footer {
-  background: #000;
   display: flex;
   justify-content: center;
   padding: 10px 0;
@@ -316,4 +376,24 @@ footer {
 
 footer p {
   color: white;
+}
+
+a.switch {
+  color: #000;
+}
+
+p.switch {
+  color: #000;
+}
+
+h1.switch {
+  color: #000;
+}
+
+h2.switch {
+  color: #000;
+}
+
+h4.switch {
+  color: #000;
 }
