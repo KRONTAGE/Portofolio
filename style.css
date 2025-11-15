@@ -313,3 +313,305 @@ footer {
 footer p {
   color: white;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+}
+
+.header {
+  align-items: center;
+  background: rgb(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  padding: 8px 0px;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 1000;
+  /* animasi */
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 1s ease;
+}
+
+.header.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav {
+  padding: 0 2%;
+}
+
+.logo {
+  color: white;
+  font-size: 2em;
+  font-family: "Franklin Gothic Medium";
+  padding: 0 2%;
+}
+
+span {
+  color: red;
+}
+
+nav ul {
+  display: flex;
+  gap: 28px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  font-family: Arial;
+  text-decoration: none;
+}
+
+/* Home */
+.home {
+  align-items: center;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.home h1 {
+  color: red;
+  font-family: "BBH Sans Hegarty";
+}
+
+.containerHome {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* animasi */
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 1s ease;
+}
+
+.containerHome.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.containerHome h1 {
+  font-size: 2.3em;
+}
+
+.containerHome a {
+  background: white;
+  color: #000;
+  border-radius: 8px;
+  font-family: "Franklin Gothic Medium";
+  padding: 4px 0;
+  text-decoration: none;
+  margin: 6px 0;
+  width: 30%;
+}
+
+.containerHome a:hover {
+  color: red;
+}
+
+/* About */
+.about {
+  align-content: center;
+  background: #000;
+  height: 80vh;
+  justify-items: center;
+}
+
+.containerAbout {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  /* animasi */
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 1s ease;
+}
+
+.containerAbout.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.line {
+  background-color: white;
+  color: white;
+  height: 100;
+  width: 3px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card h1 {
+  color: white;
+  font-family: "Franklin Gothic Medium";
+}
+
+.card p {
+  color: white;
+  font-size: 1.2em;
+  margin-top: 12px;
+}
+
+.btn {
+  background: white;
+  border-radius: 5px;
+  color: #000;
+  font-family: "Franklin Gothic Medium";
+  padding: 3px 0;
+  margin-top: 12px;
+  text-decoration: none;
+  text-align: center;
+  width: 18%;
+}
+
+.btn:hover {
+  color: red;
+}
+
+.pic {
+  border-radius: 20px;
+  margin: 8px 8px;
+  width: 20vw;
+}
+
+@media screen and (max-width: 1015px) {
+  .about {
+    height: 100vh;
+  }
+
+  .containerAbout {
+    flex-direction: column;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .containerAbout {
+    align-items: center;
+  }
+
+  .pic {
+    mask-image: linear-gradient(to bottom, black 30%, transparent 78%);
+    -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 78%);
+    position: absolute;
+    width: 40vw;
+    z-index: -1;
+  }
+
+  .card {
+    align-items: center;
+    position: absolute;
+    top: 85px;
+  }
+
+  .card h1 {
+    text-align: center;
+  }
+
+  .card p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .about {
+    height: 80vh;
+  }
+  
+  .card h1 {
+    font-size: 1.2em;
+  }
+
+  .card p {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .pic {
+    width: 50vw;
+  }
+}
+
+/* Contact */
+.containerContact {
+  align-items: center;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  justify-content: center;
+}
+
+.sosmed {
+  display: flex;
+  margin-top: 20px;
+}
+
+.boxSosmed {
+  background-color: #000;
+  border-radius: 8px;
+  border: solid white;
+  box-shadow: -1px 0px 17px 2px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: -1px 0px 17px 2px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: -1px 0px 17px 2px rgba(255, 255, 255, 0.75);
+  display: flex;
+  gap: 12px;
+  margin: 0 10px;
+  padding: 6px;
+}
+
+.boxSosmed img {
+  width: 5vw;
+}
+
+.link {
+  display: none;
+}
+
+.link.show {
+  align-items: center;
+  display: flex;
+}
+
+.link a {
+  color: white;
+  text-decoration: none;
+}
+
+h4 {
+  color: white;
+  font-size: 1.5em;
+  font-family: "Franklin Gothic Medium";
+}
+
+/* Footer */
+footer {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+footer p {
+  color: white;
+}
