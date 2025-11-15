@@ -56,6 +56,11 @@ nav ul li a {
   color: white;
   font-family: Arial;
   text-decoration: none;
+  transition: .4s ease;
+}
+
+nav ul li a:hover {
+  color: red;
 }
 
 /* Home */
@@ -221,18 +226,22 @@ nav ul li a {
     height: 80vh;
   }
   
+  .pic {
+    width: 45vw;
+  }
+
   .card h1 {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 
   .card p {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 }
 
 @media screen and (max-width: 440px) {
   .pic {
-    width: 50vw;
+    width: 50vw
   }
 }
 
