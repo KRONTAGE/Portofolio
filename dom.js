@@ -9,8 +9,10 @@ window.addEventListener("load", () => {
 });
 
 // toogle dark&light
-const body = document.body;
 const circle = document.getElementById("circle");
+const sound = document.getElementById("sound")
+
+const body = document.body;
 const header = document.querySelector("header");
 const texts = document.querySelectorAll("a");
 const ps = document.querySelectorAll("p");
@@ -44,6 +46,8 @@ circle.addEventListener("click", () => {
   boxSosmed.forEach((box) => {
     box.classList.toggle("switch");
   });
+  sound.currentTime = 0;
+  sound.play();
 });
 
 // animasi scroll to load

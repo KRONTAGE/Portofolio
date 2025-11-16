@@ -96,6 +96,7 @@ nav ul li a:hover {
 #circle {
   background: white;
   border-radius: 100%;
+  cursor: pointer;
   height: 30px;
   width: 30px;
   position: fixed;
